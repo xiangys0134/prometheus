@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv17
+  labels:
+    name: pv17
+spec:
+  storageClassName: standard
+  nfs:
+    path: /data/nfs/v17
+    server: 192.168.10.75
+  accessModes: ["ReadWriteMany","ReadWriteOnce"]
+  capacity: 
+    storage: 2Gi
